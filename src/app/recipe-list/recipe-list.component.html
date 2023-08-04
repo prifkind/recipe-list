@@ -1,1 +1,16 @@
-<div>recipe list</div>
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success">New Recipe</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div *ngFor="let recipe of recipes">
+      <app-recipe-item
+        [name]="recipe.name"
+        [description]="recipe.description"
+        [imagePath]="recipe.imagePath"
+      ></app-recipe-item>
+    </div>
+  </div>
+</div>
