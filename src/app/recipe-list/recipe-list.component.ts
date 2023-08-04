@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Recipe } from '../recipes/recipe.model';
 
 @Component({
@@ -6,14 +6,13 @@ import { Recipe } from '../recipes/recipe.model';
   templateUrl: './recipe-list.component.html',
   styleUrls: ['./recipe-list.component.css'],
 })
-export class RecipeListComponent {
+export class RecipeListComponent implements OnInit {
   recipes: Recipe[] = [
-    {
-      name: 'Chicken Parm',
-      description: 'Yummy chicken parm',
-      imagePath:
-        'https://www.sipandfeast.com/wp-content/uploads/2021/07/chicken-parmigiana-recipe-snippet.jpg',
-    },
+    new Recipe(
+      'Chicken Parm',
+      'Yummy chicken parm',
+      'https://www.sipandfeast.com/wp-content/uploads/2021/07/chicken-parmigiana-recipe-snippet.jpg'
+    ),
   ];
 
   constructor() {}
