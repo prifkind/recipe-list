@@ -17,7 +17,6 @@ export class RecipeListComponent implements OnInit {
   ];
 
   onRecipeSelect(recipe: Recipe) {
-    console.log(`clicked`, recipe)
     this.selectedRecipe.emit(recipe);
   }
 

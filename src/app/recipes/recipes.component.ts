@@ -11,6 +11,5 @@ export class RecipesComponent {
 
   handleRecipeSelected(recipe: Recipe) {
     this.selectedRecipe = recipe;
-    console.log(recipe);
   }
 }
