@@ -8,7 +8,6 @@
     <div *ngFor="let recipe of recipes">
       <app-recipe-item
         [recipe]="recipe"
-        (recipeEmit)="onRecipeSelect($event)"
       ></app-recipe-item>
     </div>
   </div>
