@@ -8,8 +8,13 @@ import { RecipeService } from '../recipes/recipe.service';
   styleUrls: ['./recipe-item.component.css'],
 })
 export class RecipeItemComponent {
-  constructor (private recipeService: RecipeService) {}
-  @Input() recipe: Recipe = { name: '', description: '', imagePath: '' };
+  constructor(private recipeService: RecipeService) {}
+  @Input() recipe: Recipe = {
+    name: '',
+    description: '',
+    imagePath: '',
+    ingredients: [],
+  };
 
   recipeClickHandler() {
     this.recipeService.recipeSelected.emit(this.recipe);
